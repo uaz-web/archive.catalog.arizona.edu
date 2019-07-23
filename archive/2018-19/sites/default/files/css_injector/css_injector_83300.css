@@ -1,0 +1,68 @@
+/* Should add a class to UABootstrap to make this re-usable? */
+
+/* Adds space to bottom of glossary */
+.view-policies-glossary {
+    margin: 0 0 10px 0;
+}
+/* Enlarges glossary letters */
+span.views-summary.views-summary-unformatted {
+    font-size: 1.3em;
+}
+/*Stylizes table header*/
+.table>thead>tr>th {
+    background-color: #eef1f1;
+    border-color: #eef1f1;
+    color: #49595e;
+    text-transform: uppercase;
+}
+/*tr.odd {
+    background-color: #eef1f1;
+}*/
+
+/*
+.table>tbody>tr>td {
+    padding: 10px 5px 10px 5px;
+}*/
+
+/*Adds border beneath each policy row*/
+.table-bordered>tbody>tr>td {
+    border-bottom: 1px solid #b6bec1;
+}
+/* RELATED SECTION */
+.field-name-field-related-guidelines-and-lin .field-label, .field-name-field-information-for-advisors .field-label{
+    color: #49595e;
+    font-family: MiloWeb-Text,Verdana,Geneva,sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 28px;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+.field-name-field-related-policy ul.triangle{
+    margin-bottom:0px;
+}
+.field-name-field-related-policy ul.triangle > div, .field-name-field-related-policy ul.triangle > ul div, 
+ul.field-name-field-related-guidelines-and-lin > li, ul.field-name-field-related-guidelines-and-lin > ul li {
+    list-style: outside none none;
+    padding-left: 0;
+    position: relative;
+}
+.field-name-field-related-policy ul.triangle > div::before, .field-name-field-related-policy ul.triangle > ul div::before,
+ul.field-name-field-related-guidelines-and-lin > li::before, ul.field-name-field-related-guidelines-and-lin > ul li::before{
+    border-left: 6px solid transparent;
+    border-top: 6px solid #0c234b;
+    content: "";
+    height: 0;
+    left: -1em;
+    position: absolute;
+    top: 8px;
+    width: 0;
+}
+.field-name-body{
+    /*border-bottom: 1px solid #eef1f1;*/
+    padding-bottom: 24px;
+}
+.well h3 {
+    margin-top: 0px; 
+    font-size: 21px;
+}

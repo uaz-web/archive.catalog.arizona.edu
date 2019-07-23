@@ -1,0 +1,77 @@
+name = UA Sites Basic
+distribution_name = UA Sites Basic
+description = Install Drupal with the UA Sites Basic install profile.
+core = 7.x
+exclusive = TRUE
+
+; =====================================
+; Module dependencies
+; =====================================
+
+; Drupal core (enabled)
+; ---------------------
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = taxonomy
+dependencies[] = update
+
+; Drupal core (disabled)
+; ----------------------
+;dependencies[] = color
+;dependencies[] = comment
+;dependencies[] = dashboard
+;dependencies[] = help
+;dependencies[] = locale
+;dependencies[] = overlay
+;dependencies[] = simpletest
+;dependencies[] = statistics
+;dependencies[] = syslog
+;dependencies[] = toolbar
+
+; UA Quickstart Modules
+; ---------------------
+dependencies[] = uaqs_block_types
+dependencies[] = ua_cas
+dependencies[] = uaqs_content_chunks
+dependencies[] = uaqs_core
+dependencies[] = uaqs_event
+dependencies[] = uaqs_featured_content
+dependencies[] = ua_google_tag
+dependencies[] = uaqs_navigation
+dependencies[] = uaqs_news
+dependencies[] = uaqs_page
+dependencies[] = uaqs_person
+dependencies[] = uaqs_program
+dependencies[] = uaqs_publication
+dependencies[] = uaqs_unit
+
+; UA Sites Modules
+; ----------------
+dependencies[] = uams_admin
+dependencies[] = uams_block_types
+dependencies[] = uams_common
+dependencies[] = uams_faq
+dependencies[] = uams_media
+dependencies[] = uams_news_feeds
+dependencies[] = uams_roles
+dependencies[] = uams_starter
+dependencies[] = uams_webform
+dependencies[] = uams_wysiwyg
+
+; 'Soft' contrib module dependencies
+; These will be enabled by the install profile but can still be disabled.
+; -----------------------------------------------------------------------
+dependencies[] = views_ui

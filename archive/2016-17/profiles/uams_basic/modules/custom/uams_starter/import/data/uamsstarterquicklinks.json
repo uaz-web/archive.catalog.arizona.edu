@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "label": "Quick Links",
+    "title": "Quick Links",
+    "uaqs_links": [
+        {
+        "url" : "http://uasites.webhost.uits.arizona.edu/samplecontent/files/wilmawildcatjpg",
+        "title": "Contact Us",
+        "attributes": {
+            "class": "list-group-item",
+            "target": "_blank"
+            }
+        },
+        {
+        "url" : "http://www.arizona.edu",
+        "title": "Arizona Home Page",
+        "attributes": {
+            "class": "list-group-item btn-arrow",
+            "target": "_blank"
+            }
+        },
+        {
+        "url" : "https://uanews.arizona.edu",
+        "title": "UANews",
+        "attributes": {
+            "class": "list-group-item",
+            "target": "_blank"
+            }
+        },
+        {
+        "url" : "http://uasites.webhost.uits.arizona.edu/samplecontent/files/wilmawildcatjpg",
+        "title": "Contact Us",
+        "attributes": {
+            "class": "list-group-item",
+            "target": "_blank"
+            }
+        }
+    ],
+    "region": "sidebar_second",
+    "visibility": "1",
+    "pages": "about",
+    "weight": "2"
+  }
+]

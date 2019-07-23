@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ */
+
+function uams_media_enable() {
+
+    field_delete_field('field_file_image_title_text');
+    field_delete_field('field_file_image_alt_text');
+
+}
+

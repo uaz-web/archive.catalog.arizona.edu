@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * uaqs_core.install
+ */
+
+/**
+ * Implements hook_install().
+ */
+function uaqs_core_install() {
+  // These variables cannot be packaged with defaultconfig because
+  // distributions wanting to use UAQS Core may need to set/package different
+  // default values.
+  if (!(variable_get('jquery_update_jquery_admin_version', FALSE))) {
+    variable_set('jquery_update_jquery_admin_version', '1.7');
+  }
+  if (!(variable_get('jquery_update_jquery_version', FALSE))) {
+    variable_set('jquery_update_jquery_version', '1.10');
+  }
+}

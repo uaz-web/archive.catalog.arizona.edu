@@ -1,0 +1,202 @@
+<?php
+// $Id: uams_social_media.module
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function uams_social_media_theme_registry_alter(&$theme_registry) {
+  // Find all .tpl.php files in this module's folder recursively.
+  $module_path = drupal_get_path('module', 'uams_social_media');
+  $template_file_objects = drupal_find_theme_templates($theme_registry, '.tpl.php', $module_path);
+  // Iterate through all found template file objects.
+  foreach ($template_file_objects as $key => $template_file_object) {
+    // If the template has not already been overridden by a theme.
+    if (!isset($theme_registry[$key]['theme path']) || !preg_match('#/themes/#', $theme_registry[$key]['theme path'])) {
+      // Alter the theme path and template elements.
+      $theme_registry[$key]['theme path'] = $module_path;
+      $theme_registry[$key] = array_merge($theme_registry[$key], $template_file_object);
+      $theme_registry[$key]['type'] = 'module';
+    }
+  }
+}
+
+
+function uams_social_media_admin() {
+  $form = array();
+  $form['uams_social_media_admin'] = array(
+    '#type' => 'vertical_tabs',
+    '#title' => t('UA Sites Social Media Settings'),
+    '#collapsible' => FALSE,
+  );
+  $form['uams_social_media_admin']['fb'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Facebook Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['uams_social_media_admin']['fb']['uams_social_media_fb_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Facebook Link'),
+    '#default_value' => variable_get('uams_social_media_fb_url', ''),
+    '#description' =>  'enter Facebook link <b>without</b> http://',
+  );
+  $form['uams_social_media_admin']['fb']['uams_social_media_fb_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Facebook Link Description'),
+    '#default_value' => variable_get('uams_social_media_fb_title', 'Click here to visit our Facebook page'),
+    '#description' =>  'enter Title tag description',
+  );
+  $form['uams_social_media_admin']['li'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('LinkedIn Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['uams_social_media_admin']['li']['uams_social_media_li_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('LinkedIn Link'),
+    '#default_value' => variable_get('uams_social_media_li_url', ''),
+    '#description' =>  'enter LinkedIn link <b>without</b> http://',
+  );
+  $form['uams_social_media_admin']['li']['uams_social_media_li_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('LinkedIn Link Description'),
+    '#default_value' => variable_get('uams_social_media_li_title', 'Click here to visit our LinkedIn page'),
+    '#description' =>  'enter Title tag description',
+  );
+  $form['uams_social_media_admin']['twit'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Twitter Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['uams_social_media_admin']['twit']['uams_social_media_twit_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Twitter Link'),
+    '#default_value' => variable_get('uams_social_media_twit_url', ''),
+    '#description' =>  'enter Twitter link <b>without</b> http://',
+  );
+  $form['uams_social_media_admin']['twit']['uams_social_media_twit_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Twitter Link Description'),
+    '#default_value' => variable_get('uams_social_media_twit_title', 'Click here to visit our Twitter page'),
+    '#description' =>  'enter Title tag description',
+  );
+  $form['uams_social_media_admin']['yt'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('YouTube Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['uams_social_media_admin']['yt']['uams_social_media_yt_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('YouTube Link'),
+    '#default_value' => variable_get('uams_social_media_yt_url', ''),
+    '#description' =>  'enter YouTube link <b>without</b> http://',
+  );
+  $form['uams_social_media_admin']['yt']['uams_social_media_yt_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('YouTube Link Description'),
+    '#default_value' => variable_get('uams_social_media_yt_title', 'Click here to visit our YouTube page'),
+    '#description' =>  'enter Title tag description',
+  );
+  return system_settings_form($form);
+}
+
+function uams_social_media_menu() {
+  $items = array();
+  $items['admin/config/search/uams_social_media'] = array(
+    'title' => 'UA Sites Social Media module settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('uams_social_media_admin'),
+    'type' => MENU_NORMAL_ITEM,
+    'access arguments' => array('administer site configuration'),
+  );
+
+  return $items;
+}
+
+function uams_social_media_block_info(){
+  $blocks['uams_social_media_links'] = array(
+    'info' => t('UA Sites Social Media'),
+    'status' => TRUE,
+    'region' => 'footer_sub',
+    'cache' => DRUPAL_NO_CACHE,
+    'weight' => '10',
+    'title' => 'Connect',
+    'properties' => array(
+        'administrative' => FALSE,
+    )
+  );
+  return($blocks);
+}
+
+function uams_social_media_block_view($delta = '') {
+  $block['subject'] = NULL;
+  $output = "";
+  $fb = variable_get('uams_social_media_fb_url', '');
+  $fbt = variable_get('uams_social_media_fb_title', '');
+  $li = variable_get('uams_social_media_li_url', '');
+  $lit = variable_get('uams_social_media_li_title', '');
+  $tw = variable_get('uams_social_media_twit_url', '');
+  $twt = variable_get('uams_social_media_twit_title', '');
+  $yt = variable_get('uams_social_media_yt_url', '');
+  $ytt = variable_get('uams_social_media_yt_title', '');
+
+  if ($fb || $li || $yt || $tw) {
+    $output .= '<ul id="social-media-links" class="clearfix">';
+    if ($fb) {
+        $output .= '<li class="social-media fb">';
+        $output .= l('<i></i>Facebook', 'http://' . $fb, array(
+            'attributes' => array(
+                'class' => array('facebook'),
+                'target'=>'_blank',
+                'title' => "$fbt"),
+            'html' => TRUE
+            )
+        );
+        $output .= '</li>';
+    }
+    if ($li) {
+        $output .= '<li class="social-media li">';
+        $output .= l('<i></i>LinkedIN', 'http://' . $li, array(
+            'attributes' => array(
+                'class' => array('linkedin'),
+                'target'=>'_blank',
+                'title' => "$lit"),
+            'html' => TRUE
+            )
+        );
+        $output .= '</li>';
+    }
+    if ($yt) {
+      $output .= '<li class="social-media yt">';
+      $output .= l('<i></i>YouTube', 'http://' . $yt, array(
+          'attributes' => array(
+              'class' => array('youtube'),
+              'target'=>'_blank',
+              'title' => "$ytt"),
+          'html' => TRUE
+          )
+      );
+     $output .= '</li>';
+    }
+    if ($tw) {
+      $output .= '<li class="social-media tw">';
+      $output .= l('<i></i>Twitter', 'http://' . $tw, array(
+          'attributes' => array(
+              'class' => array('twitter'),
+              'target'=>'_blank',
+              'title' => "$twt"),
+          'html' => TRUE
+          )
+      );
+     $output .= '</li>';
+    }
+    $output .= '</ul>';
+
+  }
+
+  $block['content'] = $output;
+  return $block;
+}

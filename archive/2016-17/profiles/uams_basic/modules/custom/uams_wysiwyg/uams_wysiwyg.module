@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UA Sites WYSIWYG feature.
+ */
+
+include_once 'uams_wysiwyg.features.inc';

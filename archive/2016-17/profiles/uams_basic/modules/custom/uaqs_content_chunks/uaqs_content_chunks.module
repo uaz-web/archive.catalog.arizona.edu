@@ -1,0 +1,191 @@
+<?php
+/**
+ * @file
+ * Code for the UAQS Content Chunks feature.
+ */
+
+include_once 'uaqs_content_chunks.features.inc';
+include_once 'uaqs_content_chunks.theme_field_overrides.inc';
+include_once 'uaqs_content_chunks.preprocess_entity_overrides.inc';
+
+/**
+ * Override or insert variables into the UAQS Content Chunks templates.
+ *
+ * Based on the optional extra function
+ * STARTERKIT_preprocess_node(&$variables, $hook) from template.php in the Zen
+ * theme,
+ * http://drupal.stackexchange.com/questions/11114/is-it-possible-to-define-a-hook-preprocess-function-based-on-entity-type-such-as
+ * and https://www.drupal.org/node/2521802
+ *
+ * @param array &$variables
+ *   An array of variables to pass to the theme template.
+ * @param string $hook
+ *   The hook name.
+ */
+//function uaqs_content_chunks_preprocess_entity(array &$variables, $hook) {
+  //$entity_type = $variables['elements']['#entity_type'];
+  //if ($entity_type == 'paragraphs_item') {
+    //$bundle = $variables['elements']['#bundle'];
+    //$function = __FUNCTION__ . '_paragraphs_item_' . $bundle;
+    //if (function_exists($function)) {
+      //$function($variables, $hook);
+    //}
+  //}
+//}
+
+/**
+ * Implements hook_theme_registry_alter().
+ *
+ * Taken directly from https://www.drupal.org/node/715160
+ * (Using template (.tpl.php) files in your own module).
+ */
+function uaqs_content_chunks_theme_registry_alter(&$theme_registry) {
+  // Defined path to the current module.
+  $module_path = drupal_get_path('module', 'uaqs_content_chunks');
+  // Find all .tpl.php files in this module's folder recursively.
+  $template_file_objects = drupal_find_theme_templates($theme_registry, '.tpl.php', $module_path);
+  // Iterate through all found template file objects.
+  foreach ($template_file_objects as $key => $template_file_object) {
+    // If the template has not already been overridden by a theme.
+    if (!isset($theme_registry[$key]['theme path']) || !preg_match('#/themes/#', $theme_registry[$key]['theme path'])) {
+      // Alter the theme path and template elements.
+      $theme_registry[$key]['theme path'] = $module_path;
+      $theme_registry[$key] = array_merge($theme_registry[$key], $template_file_object);
+      $theme_registry[$key]['type'] = 'module';
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function uaqs_content_chunks_theme() {
+  $ourname = 'uaqs_content_chunks';
+  $ourprefix = 'paragraphs_item__';
+  $fileprefix = strtr($ourprefix, '_', '-');
+  $content_chunk_types = array(
+    //'uaqs_column_image',
+    'uaqs_file_download',
+    'uaqs_headed_text',
+    'uaqs_plain_text',
+  );
+  $theme_dir_path = drupal_get_path('module', $ourname) . '/templates';
+  $theme = array();
+  foreach ($content_chunk_types as $cctype) {
+    $theme[$ourprefix . $cctype] = array(
+      'render element' => 'elements',
+      'template' => ($fileprefix . $cctype),
+      'path' => $theme_dir_path,
+    );
+  }
+  $host_item_group = 'paragraphs_items';
+  $theme[$host_item_group] = array(
+    'render element' => 'element',
+    'template' => strtr($host_item_group, '_', '-'),
+    'path' => $theme_dir_path,
+  );
+  return $theme;
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function uaqs_content_chunks_entity_info_alter(&$entity_info) {
+  $entity_info['paragraphs_item']['view modes']['uaqs_align_left'] = array(
+    'label' => t('Align left'),
+    'custom settings' => FALSE,
+  );
+  $entity_info['paragraphs_item']['view modes']['uaqs_align_right'] = array(
+    'label' => t('Align right'),
+    'custom settings' => FALSE,
+  );
+}
+
+/**
+ * Implements hook_field_attach_form().
+ *
+ * Add view mode field to paragraphs item submit form.
+ */
+function uaqs_content_chunks_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
+
+  //Add view mode selection to paragraphs items
+  if($entity_type != 'paragraphs_item') return;
+
+  $bundle = $entity->bundle;
+  $entity_info = $entity->entityInfo();
+
+  $paragraphs_view_modes = $entity_info['view modes'];
+  $bundle_view_mode_settings = field_view_mode_settings($entity_type, $bundle);
+
+  $available_view_modes = array('' => 'Default');
+
+  //Prepare view mode list
+  foreach ($bundle_view_mode_settings as $key => $view_mode){
+    if($view_mode['custom_settings']){
+      $available_view_modes[$key] = $paragraphs_view_modes[$key]['label'];
+    }
+  }
+
+  $form['view_mode'] = array(
+    '#type' => 'select',
+    '#title' => t('View mode'),
+    '#options' => $available_view_modes,
+    '#default_value' => $entity->view_mode,
+    '#weight' => 99,
+  );
+}
+
+/**
+ * Implements hook_field_attach_submit().
+ *
+ * Save view mode value.
+ */
+
+function uaqs_content_chunks_field_attach_submit($entity_type, $entity, $form, &$form_state) {
+
+  if($entity_type == 'paragraphs_item'){
+    $entity->view_mode = $form['view_mode']['#value'];
+  }
+
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function uaqs_content_chunks_field_formatter_info() {
+  return array(
+    'paragraphs_view_mode' => array(
+      'label' => t('Paragraphs view mode'),
+      'field types' => array('paragraphs'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function uaqs_content_chunks_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'paragraphs_view_mode':
+      // Prevent displaying useless markup if we don't have any values.
+      if (empty($items)) {
+        return $element;
+      }
+      $element['#theme_wrappers'] = array('paragraphs_items');
+      $element['#view_mode'] = 'uaqs_content_chunks_formatter';
+
+      foreach ($items as $delta => $item) {
+        if ($paragraph = paragraphs_field_get_entity($item)) {
+          if (entity_access('view', 'paragraphs_item', $paragraph)) {
+            $view_mode = $paragraph->view_mode;
+            $element[$delta]['entity'] = $paragraph->view($view_mode);
+          }
+        }
+      }
+    break;
+  }
+  return $element;
+}
+

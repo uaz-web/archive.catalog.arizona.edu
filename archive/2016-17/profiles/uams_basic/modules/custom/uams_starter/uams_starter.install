@@ -1,0 +1,49 @@
+<?php
+/**
+ * @file
+ * uams_starter.install
+ */
+
+/**
+ * Null stub to disable message logging.
+ *
+ * @param string $message
+ *   the message to display
+ * @param string $level
+ *   message type
+ */
+function _uams_starter_null_message($message, $level) {
+  return;
+}
+
+/**
+ * Implements hook_enable().
+ */
+function uams_starter_enable() {
+  migrate_static_registration();
+  $info = uams_starter_migrate_api();
+  Migration::setDisplayFunction('_uams_starter_null_message');
+  foreach ($info['migrations'] as $machine_name => $arguments) {
+    $migration = Migration::getInstance($machine_name);
+    $migration->processImport();
+  }
+  variable_set(
+    'site_frontpage',
+    Migration::getInstance('UamsStarterPage')->getFrontPageNode()
+  );
+}
+
+/**
+ * Implements hook_disable().
+ */
+function uams_starter_disable() {
+  $info = uams_starter_migrate_api();
+  Migration::setDisplayFunction('_uams_starter_null_message');
+  $hitlist = array_reverse($info['migrations']);
+  foreach ($hitlist as $machine_name => $arguments) {
+    $migration = Migration::getInstance($machine_name);
+    $migration->processRollback();
+  }
+  MigrateGroup::deregister('uams_starter');
+  variable_set('site_frontpage', 'node');
+}

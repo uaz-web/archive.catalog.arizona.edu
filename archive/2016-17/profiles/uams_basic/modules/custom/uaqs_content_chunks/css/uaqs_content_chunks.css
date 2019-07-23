@@ -1,0 +1,19 @@
+figure, figure.pull-right, figure.pull-left {
+    margin: 1em 0em;
+}
+
+figure, figure img {
+    width:100%;
+    height:auto;
+}
+
+@media(min-width:768px) {
+    figure.pull-left {
+        margin: 0.5em 1em 0.5em 0em;
+        max-width: 33%;
+    }
+    figure.pull-right {
+        margin: 0.5em 0em 0.5em 1em;
+        max-width: 33%;
+    }
+}

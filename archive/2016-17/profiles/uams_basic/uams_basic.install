@@ -1,0 +1,207 @@
+<?php
+/**
+ * @file
+ * Installation code for UA Sites Basic.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ */
+function uams_basic_install() {
+  $t = get_t();
+
+  // Force Drupal to look for themes in profile path.
+  variable_set('install_profile', 'uams_basic');
+  list_themes(TRUE);
+
+  // Enable themes.
+  $default_theme = 'uams_ua_zen';
+  $admin_theme = 'seven';
+  theme_enable(array($default_theme, $admin_theme));
+  variable_set('theme_default', $default_theme);
+  variable_set('admin_theme', $admin_theme);
+  variable_set('node_admin_theme', '1');
+
+  // Disable bartik theme.
+  theme_disable(array('bartik'));
+
+  // Enable some standard blocks.
+  uams_basic_default_blocks($default_theme, $admin_theme);
+
+  // Create a Home link in the main menu.
+  $item = array(
+    'link_title' => $t('Home'),
+    'link_path' => '<front>',
+    'menu_name' => 'main-menu',
+  );
+  menu_link_save($item);
+
+  // Update the menu router information.
+  menu_rebuild();
+
+  // Force any permissions in features to be built before assigning roles.
+  features_rebuild();
+
+  // Enable default permissions for system roles.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'search content'));
+  user_role_grant_permissions(
+    DRUPAL_AUTHENTICATED_RID,
+    array('access content', 'search content')
+  );
+
+  // Grant all permissions for "administrator" role.
+  if ($admin_role = user_role_load_by_name('administrator')) {
+    user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  }
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+}
+
+/**
+ * Insert block definitions in the database.
+ *
+ * All blocks start with a common set of base block description values,
+ * overriden by the additional block-specific values.
+ *
+ * @param string $theme
+ *   Theme in which these block definitions apply.
+ * @param string $module
+ *   The module responsible for the block.
+ * @param array $block_defs
+ *   An associative array of settings for each block:
+ *   - delta: The block identifier (string).
+ *   - description: Block description (associative array).
+ * @param array $common
+ *   The settings common to all blocks.
+ */
+function uams_basic_block_db_insert($theme, $module, array $block_defs, array $common) {
+  $common['theme'] = $theme;
+  $common['module'] = $module;
+  foreach ($block_defs as $delta => $description) {
+    $record = array_merge($common, $description);
+    $record['delta'] = $delta;
+    db_insert('block')
+      ->fields($record)
+      ->execute();
+  }
+}
+
+/**
+ * Update a single block definition in the database.
+ *
+ * The combination of theme, module and delta should form a unique key to find
+ * a block if it exists, so this should update at most one block.
+ *
+ * @param string $theme
+ *   Theme in which the block definition applies.
+ * @param string $module
+ *   The module responsible for the block.
+ * @param string $delta
+ *   The block identifier (distinct from the numeric bid).
+ * @param array $fields
+ *   Fields to update the block definition (associative array).
+ *
+ * @return bool
+ *   TRUE on success, FALSE on failure.
+ */
+function uams_basic_block_db_update($theme, $module, $delta, array $fields) {
+  $n_updated = db_update('block')
+    ->fields($fields)
+    ->condition('module', $module)
+    ->condition('delta', $delta)
+    ->condition('theme', $theme)
+    ->execute();
+  return ($n_updated == 1);
+}
+
+/**
+ * Enable some default blocks.
+ *
+ * @param string $default_theme
+ *   Default theme in which the block definitions apply.
+ * @param string $admin_theme
+ *   Administrative theme to use for relevant block definitions.
+ */
+function uams_basic_default_blocks($default_theme, $admin_theme) {
+  $base_common = array(
+    'status' => 1,
+    'weight' => 0,
+    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+    'pages' => '',
+    'title' => '',
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  $front_views = $base_common;
+  $front_views['visibility'] = BLOCK_VISIBILITY_LISTED;
+  $front_views['pages'] = '<front>';
+
+  // Basic core system blocks.
+  $system_blocks = array(
+    'main' => array(
+        'region' => 'content',
+    ),
+    'help' => array (
+        'region' => 'help',
+    ),
+  );
+  uams_basic_block_db_insert($default_theme, 'system', $system_blocks, $base_common);
+  uams_basic_block_db_insert($admin_theme, 'system', $system_blocks, $base_common);
+
+  // Basic search.
+  $search_blocks = array(
+    'form' => array(
+      'region' => 'header'
+    ),
+  );
+  uams_basic_block_db_insert($default_theme, 'search', $search_blocks, $base_common);
+
+  // UA Navigation Feature Module.
+  if (module_exists('uaqs_navigation')) {
+    $menu_blocks = array(
+      'uaqs-second-level' => array(
+        'region' => 'sidebar_first',
+      ),
+    );
+    uams_basic_block_db_insert($default_theme, 'menu_block', $menu_blocks, $base_common);
+  }
+
+  // UA Featured Content.
+  if (module_exists('uaqs_featured_content')) {
+    $carousel_blocks = array(
+      'uaqs_hero_carousel-hero_block' => array(
+        'region' => 'content_featured',
+        'title' => '<none>',
+      ),
+    );
+    uams_basic_block_db_insert($default_theme, 'views', $carousel_blocks, $front_views);
+  }
+
+  // UA News.
+  if (module_exists('uaqs_news')) {
+    $news_blocks = array(
+      'uaqs_news-home_3_col_news_block' => array(
+        'region' => 'content',
+        'weight' => 10,
+      ),
+    );
+    uams_basic_block_db_insert($default_theme, 'views', $news_blocks, $front_views);
+  }
+
+  // UA Event.
+  if (module_exists('uaqs_event')) {
+    $event_blocks = array(
+      'uaqs_events-block' => array(
+        'region' => 'content',
+        'title' => 'Events',
+        'weight' => 20,
+      ),
+    );
+    uams_basic_block_db_insert($default_theme, 'views', $event_blocks, $front_views);
+  }
+}
+

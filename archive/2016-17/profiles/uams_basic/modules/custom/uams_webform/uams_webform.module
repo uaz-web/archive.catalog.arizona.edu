@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UA Sites Webform feature.
+ */
+
+include_once 'uams_webform.features.inc';

@@ -1,0 +1,78 @@
+<?php
+/**
+ * @file
+ * uaqs_navigation_global_footer.install
+ */
+
+/**
+ * Implements hook_install().
+ */
+function uaqs_navigation_global_footer_install() {
+  $t = get_t();
+
+  // Create 'Footer links -- information for' menu if it doesn't already exist.
+  $menu_name = 'uaqs-footer-information-for';
+  if (!menu_load($menu_name)) {
+    $menu = array(
+      'menu_name' => $menu_name,
+      'title' => $t('Footer links -- Information For'),
+      'description' => 'In UA QuickStart the <em>Footer links -- Information For</em> menu generally contains enterprise level navigation links for sections of Arizona.edu.',
+    );
+    menu_save($menu);
+  }
+  // Create 'Footer links -- Topics' menu if it doesn't already exist.
+  $menu_name = 'uaqs-footer-topics';
+  if (!menu_load($menu_name)) {
+    $menu = array(
+      'menu_name' => $menu_name,
+      'title' => $t('Footer links -- Topics'),
+      'description' => 'In UA QuickStart the <em>Footer links -- Topics</em> menu generally contains enterprise level topics.',
+    );
+    menu_save($menu);
+  }
+  // Create 'Footer links -- Resources' menu if it doesn't already exist.
+  $menu_name = 'uaqs-footer-resources';
+  if (!menu_load($menu_name)) {
+    $menu = array(
+      'menu_name' => $menu_name,
+      'title' => $t('Footer links -- Resources'),
+      'description' => 'In UA QuickStart the <em>Footer links -- Resources</em> menu generally contains enterprise level resources.',
+    );
+    menu_save($menu);
+  }
+  // Create 'Footer links -- Main' menu if it doesn't already exist.
+  $menu_name = 'uaqs-footer-main';
+  if (!menu_load($menu_name)) {
+    $menu = array(
+      'menu_name' => $menu_name,
+      'title' => $t('Footer links -- Main'),
+      'description' => 'In UA QuickStart the <em>Footer links -- Main</em> menu generally contains enterprise level links.',
+    );
+    menu_save($menu);
+  }
+}
+
+/**
+ * Implements hook_enable().
+ */
+function uaqs_navigation_global_footer_enable() {
+  migrate_static_registration();
+  $info = uaqs_navigation_global_footer_migrate_api();
+  foreach ($info['migrations'] as $machine_name => $arguments) {
+    $migration = Migration::getInstance($machine_name);
+    $migration->processImport();
+  }
+}
+
+/**
+ * Implements hook_disable().
+ */
+function uaqs_navigation_global_footer_disable() {
+  $info = uaqs_navigation_global_footer_migrate_api();
+  $hitlist = array_reverse($info['migrations']);
+  foreach ($hitlist as $machine_name => $arguments) {
+    $migration = Migration::getInstance($machine_name);
+    $migration->processRollback();
+  }
+  MigrateGroup::deregister('uaqs_navigation');
+}

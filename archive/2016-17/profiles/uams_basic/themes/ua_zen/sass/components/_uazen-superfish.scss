@@ -1,0 +1,83 @@
+#main_nav {
+	ul.sf-menu { 
+		select {
+				width: 224px;
+				width: 14rem;
+				margin: 20px 0;
+				margin: 1.25rem 0;
+			}
+		.tinynav-wrapper {
+			padding: 1em 0;
+			select.tinynav.tinynav1 {
+				margin: 0 auto;
+			}
+		}
+		li ul {
+			background-color: rgba(12, 35, 75, 0.8); 
+			background-image: url('../images/menu-triangle.png');
+			background-position: 2em 0;
+			background-repeat: no-repeat;
+			li {
+				padding: 0;
+				margin: 0;
+			}
+		}
+		li:hover > ul,
+		li.sfHover > ul {
+			top: 100%;
+		}
+	}
+}
+
+/* RESPONSIVE MENU */
+
+#main_nav {
+	a#superfish-1-toggle {
+		display: block;
+		padding: 13px;
+		padding: 0.8125rem;
+		color: #fff;
+		background: #0c234b;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-size: 1rem;
+		font-weight: bold;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+	ul#superfish-1-accordion {
+		background: #0c234b;
+		padding: 10px 0;
+		padding: 0.625rem 0;
+		border-top: 1px solid #fff;
+		li {
+			padding: 10px 0;
+			padding: 0 .625rem;
+			a {
+				text-align: center;
+				color: #fff;
+				font-size: 16px;
+				font-size: 1rem;
+				padding: 13px 0;
+				padding: 0.8125rem 0;
+				&:hover {
+					background: #395180;
+				}
+			}
+			ul {
+				background-image: none;
+				padding: 0;
+				background: #000136;
+				li {
+					a {
+						text-transform: uppercase;
+						font-weight: bold;
+						font-size: 13px;
+						font-size: 0.8125em;
+					}
+				}
+			}
+		}
+	}
+}

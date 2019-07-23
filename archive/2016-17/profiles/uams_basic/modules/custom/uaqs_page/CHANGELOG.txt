@@ -1,0 +1,24 @@
+7.x-1.0-alpha3, 2015-11-13
+------------------------------
+- UADIGITAL-375: Reverting some unexpected feature updates.
+- Merged in macaulay/ua_page/uadigital-375 (pull request #4).
+- UADIGITAL-375: Added sub-title field to the Page content type and placed it to display under the title field.
+- Back to dev.
+
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #3).
+- UADIGITAL-322: Changes from feature module updates.
+- Merged in mmunro-ltrr/ua_page/UADIGITAL-139 (pull request #2).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Merged in rename-body (pull request #1).
+- UADIGITAL-47: Making body field name distinct.
+- Updating .info file.
+- Adding README.
+

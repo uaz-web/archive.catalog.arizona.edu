@@ -1,0 +1,13 @@
+UA Content Chunks 7.x-1.0-alpha0, 2015-11-18
+--------------------------------------------
+- Fix the placement of the sub-title field.
+- Correct the sub-title field label.
+- Add a sub-title field, like to one added to UA Basic Page.
+- Add a text format for HTML5 phrasing content, clean up the recreated feature.
+- Restore missing UA namespacing for the ua_main_content field.
+- Rename the node type hosting Paragraphs-based content to UA Flexible Page.
+- Update for a new version of the Paragraphs module.
+- Enable markup in some text fields.
+- Match the array key template_preprocess_paragraphs_items() expects.
+- Put this with the other UofA features in the modules list.
+

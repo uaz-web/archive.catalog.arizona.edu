@@ -1,0 +1,14 @@
+name = UAMS Media Paragraphs Item
+core = 7.x
+package = UA Sites
+dependencies[] = defaultconfig
+dependencies[] = features
+dependencies[] = file_entity
+dependencies[] = media
+dependencies[] = paragraphs
+dependencies[] = uams_media
+features[defaultconfig][] = strongarm:field_bundle_settings_paragraphs_item__uams_media
+features[features_api][] = api:2
+features[field_instance][] = paragraphs_item-uams_media-field_uams_media
+features[paragraphs][] = uams_media
+project path = profiles/uams_basic/modules/custom/uams_media

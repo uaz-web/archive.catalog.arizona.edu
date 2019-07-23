@@ -1,0 +1,27 @@
+/* THESE RULES APPLY TO THE TABLES THAT ARE IN THE POLICIES SECTIONS*/
+
+table {
+    /*border: 1px solid #b6bec1;*/
+}
+
+table>thead>tr>th {
+    background-color: #eef1f1;
+    border: #b6bec1;
+    color: #49595e;
+}
+
+.table-heading {
+    background-color: #eef1f1;
+    border: #b6bec1;
+    color: #49595e;
+}
+
+table>tbody>tr>td {
+    border-bottom: 1px solid #b6bec1;
+    border-top: 1px solid #b6bec1;
+    /*font-weight: 500;*/
+}
+
+table>tbody>tr>td>p {
+    /*font-weight: normal;*/
+}

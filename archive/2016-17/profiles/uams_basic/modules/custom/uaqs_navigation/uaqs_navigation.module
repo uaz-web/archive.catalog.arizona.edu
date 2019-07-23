@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * Code for the UAQS Navigation feature.
+ */
+
+include_once 'uaqs_navigation.features.inc';
+
+/**
+ * Implements hook_menu_block_blocks().
+ */
+function uaqs_navigation_menu_block_blocks() {
+  return array(
+    // Provides a second-level navigation menu block.
+    'uaqs-second-level' => array(
+      'menu_name' => MENU_TREE__CURRENT_PAGE_MENU,
+      'parent_mlid' => 0,
+      'title_link' => FALSE,
+      'admin_title' => 'UAQS Second-level Navigation',
+      'level' => 2,
+      'depth' => 2,
+    ),
+  );
+}

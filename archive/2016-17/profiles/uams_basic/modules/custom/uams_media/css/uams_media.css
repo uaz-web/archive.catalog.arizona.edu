@@ -1,0 +1,18 @@
+.media-right img {max-width:initial;}
+
+figcaption {
+    border-bottom: 1px solid #eef1f1;
+    padding-bottom: 1.25rem;
+    padding-top: .5rem;
+}
+figure.pull-right, img.pull-right {
+    float: left;
+    margin: 0.4em 0px 0.25em 1em;
+    clear:right;
+}
+
+figure.pull-left, img.pull-left {
+    float: left;
+    margin: 0.4em 1em 0.25em 0em;
+    clear:left;
+}

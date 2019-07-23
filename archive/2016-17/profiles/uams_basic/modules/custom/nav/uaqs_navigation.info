@@ -1,0 +1,10 @@
+name = UAQS Navigation
+description = Provides various dependencies and configuration for navigation components consistent with UAQS web branding standards.
+core = 7.x
+package = The University of Arizona
+dependencies[] = ctools
+dependencies[] = menu_block
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = menu_secondary_links_source

@@ -1,0 +1,88 @@
+name = UA Zen Subtheme for UA Sites
+description = The University of Arizona's official managed sites sub-theme for UA Zen. Make all of your changes in this theme so that you can update to the latest UAZen.
+core = 7.x
+base theme = ua_zen
+
+stylesheets[all][] = css/overrides.css
+
+; This section lists the regions defined in Zen's default page.tpl.php and
+; maintenance-page.tpl.php files. The name in brackets is the machine name of
+; the region. The text after the equals sign is a descriptive text used on the
+; admin/structure/blocks page.
+;
+; In the page.tpl, the contents of the region are output with a
+; $page['MACHINE-NAME'] variable and, in the maintenance-page.tpl, the region is
+; output with a $MACHINE-NAME variable. For example, with this line in the .info
+; file:
+;   regions[header_top] = Header top
+;   You'll use this variable in page.tpl.php:
+;   <?php print render($page['header_top']); ?>
+;   And you'll use this variable in maintenance-page.tpl.php:
+;   <?php print $header_top; ?>
+
+regions[alert]                     = Alert
+;regions[header_ua]                = UA header
+regions[header]                    = Header
+regions[navigation]                = Navigation bar
+regions[help]                      = Help
+regions[content_featured]          = Featured content
+regions[sidebar_first]             = First sidebar
+regions[sidebar_second]            = Second sidebar
+regions[highlighted]               = Highlighted
+regions[content_top]               = Content top
+regions[content]                   = Content Body
+regions[content_2_col_1]           = Content 2-column stacked(1)
+regions[content_2_col_2]           = Content 2-column stacked(2)
+regions[content_3_col_1]           = Content 3-column stacked(1)
+regions[content_3_col_2]           = Content 3-column stacked(2)
+regions[content_3_col_3]           = Content 3-column stacked(3)
+regions[full_width_content_bottom] = Full width content bottom
+regions[content_4_col_1]           = Content 4-column stacked(1)
+regions[content_4_col_2]           = Content 4-column stacked(2)
+regions[content_4_col_3]           = Content 4-column stacked(3)
+regions[content_4_col_4]           = Content 4-column stacked(4)
+regions[content_bottom]            = Content bottom
+regions[footer]                    = Footer
+regions[footer_sub]                = Sub footer
+regions[bottom]                    = Page bottom
+;regions[footer_ua]                = UA main footer
+;regions[footer_ua_hidden]         = UA hidden footer
+
+; The page_top and page_bottom regions are hidden, which means they will not
+; show up on the blocks administration page. But they are required in order for
+; the html.tpl.php to work properly, so do not delete them.
+
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+settings[ua_bootstrap_source]      = cdn
+settings[ua_bootstrap_cdn_version] = latest
+settings[ua_bootstrap_minified]    = 1
+
+settings[regionclass][full_width_content_bottom][] = background-wrapper bg-triangles-fade bg-ologie-light-river
+settings[regionclass][sidebar_second][] = bg-ash-tint card-block
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Breakpoints
+;;;;;;;;;;;;;;;;;;;;;
+breakpoints[screen-xs-max] = (max-width: 767px)
+breakpoints[screen-sm-min] = (min-width: 768px)
+breakpoints[screen-sm-max] = (max-width: 991px)
+breakpoints[screen-md-min] = (min-width: 992px)
+breakpoints[screen-md-max] = (max-width: 1199px)
+breakpoints[screen-lg-min] = (min-width: 1200px)
+; Multipiers
+multipliers[screen-xs-max][] = 1.5x
+multipliers[screen-xs-max][] = 2x
+multipliers[screen-sm-min][] = 1.5x
+multipliers[screen-sm-min][] = 2x
+multipliers[screen-sm-max][] = 1.5x
+multipliers[screen-sm-max][] = 2x
+multipliers[screen-md-min][] = 1.5x
+multipliers[screen-md-min][] = 2x
+multipliers[screen-md-max][] = 1.5x
+multipliers[screen-md-max][] = 2x
+multipliers[screen-lg-min][] = 1.5x
+multipliers[screen-lg-min][] = 2x
+

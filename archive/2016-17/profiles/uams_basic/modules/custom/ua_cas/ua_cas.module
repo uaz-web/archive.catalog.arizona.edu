@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UA CAS Feature module.
+ */
+
+include_once 'ua_cas.features.inc';

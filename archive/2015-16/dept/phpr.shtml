@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<title>Pharmacy Practice and Science, UA Catalog</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="/2015-16/css/catalog.css">
+<link rel="stylesheet" type="text/css" href="../css/framework.css">
+
+
+<style type="text/css">
+.style1 {
+	text-align: left;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" style="text-align: right">
+
+<div class="clear"></div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<iframe src="../borders/top.htm" scrolling="no" marginwidth="0" marginheight="0" frameBorder="0"  style="border-style: none; width: 100%; height: 95px; "></iframe>
+</td></tr></table><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+<iframe src="../borders/left.htm" frameBorder="0" scrolling="no" style="border-style: none; width: 240px; height: 718px; "></iframe>
+</td><td valign="top" width="24"></td><td valign="top"><h2 align="center">Departments, Schools, Colleges</h2>
+<h4 align="center">PHARMACY PRACTICE AND SCIENCE</h4>
+  <p align="left"><b>Contact Information:</b></p>
+  <!--webbot bot="Include" u-include="../contacts/PHPR.html" tag="BODY" startspan -->
+
+<CENTER>
+<TABLE WIDTH="96%">
+<TR>
+<TD VALIGN=TOP WIDTH=48%>
+
+Department of Pharmacy Practice and Science<BR>
+The University of Arizona<br>
+Drachman Hall, Room B207JJ<br>
+1295 N Martin Ave<BR>PO Box 210202<BR>Tucson, AZ 85721-0202</TD>
+<td width=4%> 
+</td>
+<TD VALIGN=TOP WIDTH=48%>
+
+Phone: (520) 626-5730<BR>Fax:  (520) 626-7355<BR>Email:  
+<a href="mailto:rrogers@pharmacy.arizona.edu">rrogers@pharmacy.arizona.edu</a><BR>Web: 
+<img src="/2011-12/images/globe-external.gif" alt="External Link" width="15" height="15"> 
+<a href="http://www.pharmacy.arizona.edu/topics/pharmacy-practice-and-science">Department Homepage</a>
+</TD></TR></TABLE></center>
+
+<!--webbot bot="Include" i-checksum="50987" endspan --><p class="style1">
+<strong>Offers courses in:</strong></p>
+<ul>
+	<li>
+	<p class="style1">PHPR - Pharmacy Practice</p>
+	</li>
+</ul>
+<p>&nbsp;</p>
+    <p>The Department of Pharmacy Practice and Science is in the <a href="pharm.html">College
+    of Pharmacy</a>.</p>
+  <p><b>For more information contact the department office listed
+  above.</b></p>
+
+</body>
+
+</html>

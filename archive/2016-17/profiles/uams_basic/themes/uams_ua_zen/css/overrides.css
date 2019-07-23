@@ -1,0 +1,23 @@
+.one-sidebar.sidebar-second .sidebar a.list-group-item {
+  line-height: 1.35;
+}
+/** Homepage Header Image **/
+body.front .region-content-top .bean-uams-header-image {
+  margin-bottom: 1.6em;
+}
+/** Hides search info line in search results page **/
+.search-result p.search-info {
+ display: none;
+}
+/** Stylizes sidebar menu header **/
+.block-menu-block h2.block__title{
+font-weight: 700;
+text-transform: uppercase;
+color: #49595e;
+font-family: MiloWeb-Text,Verdana,Geneva,sans-serif;
+font-size: 20px;
+}
+/** Adds top margin to sidebar **/
+.sidebar {
+    margin-top: 60px;
+}

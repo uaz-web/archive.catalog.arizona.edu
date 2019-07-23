@@ -1,0 +1,8 @@
+name = UA Sites Starter Content
+description = Provides sample content to demonstrate various features of the UA Sites distribution.
+core = 7.x
+package = UA Sites
+dependencies[] = migrate
+dependencies[] = uaqs_page
+dependencies[] = uaqs_core
+files[] = import/uams_starter_page.inc

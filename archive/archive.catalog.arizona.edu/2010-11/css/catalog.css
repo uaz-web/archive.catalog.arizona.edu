@@ -1,0 +1,149 @@
+﻿html, body { margin: 0; padding: 0; font-family: Arial, Avenir, "Lucida Grande", Verdana, Helvetica, sans-serif; font-size: 86%; background-color: #FFF; font-size medium }
+img { border: 0; }
+p { font-size: 1em;}
+li { font-size: 1em;}
+h1 { font-size: medium; color: #036; margin: 0; padding: 0;}
+h2 { font-size: medium; color: #036; margin: 0; padding: 0;}
+h3 { font-size: medium; color: #036; margin: 0; padding: 0;}
+h4 { font-size: small; color: #036; }
+h5 { font-size: medium; color: #000000; margin: 0; padding: 0; }
+ul {line-height: 25px; text-align: left; } 
+/*{font-size: .85em; } 
+
+{ font-size: .85em;}*/
+
+//div { margin: 0; padding: 0; }
+
+a:link,
+a:visited { color: #036; }
+a:hover { color: #C03; }
+
+.bold { font-weight: bold; }
+.italic { font-style:italic; }
+.bold_italic { font-weight: bold; font-style: italic; }
+
+.padleft { padding-left: 30px; background-color: #036;}
+.padright { padding-right: 40px; }
+.floatleft { float: left; }
+.floatright { float: right; }
+.clear { clear: both; }
+.copyright {text-align: center;}
+.indent {margin-left: 2em;}
+.title { padding: 0 0 0.3em 0; margin: 0; clear: both; }
+.border { border: 1px solid #666; }
+
+body{
+	margin: auto;
+	padding: 0px;
+	
+}
+
+#ua_banner {
+	height: 95px;
+	background-image: url(../images/background2.jpg) ;
+	margin-bottom: 12px;
+	padding: 0px;
+}
+
+#ua_banner_seal {
+	background-image: url(http://catalog.arizona.edu/2010-11/images/seal4.gif); background-repeat:no-repeat; background-position: right; margin-top: 0px;} 
+
+#ua_banner_back {
+	height: 70px;
+	width: 100%;
+	background-image:url(http://catalog.arizona.edu/2010-11/images/background.jpg);
+}
+
+#ua_banner_fixed { width: 760px; margin: 0 auto; padding-left: 80px; }
+
+.seal { float: right; padding: 30px; width: 130px; height: 126px; }
+
+#ua_banner_links {
+	color: #FFFFFF;
+	float: right;
+	font-size: 110%;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-right: 20px;
+	margin: 0px;
+	padding-top: 15px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+#ua_banner_links li {
+	display: inline;
+	list-style-type: none;
+}
+
+#ua_banner_links li a {
+	color: #FFFFFF;
+}
+
+#ua_banner_links li a:hover {
+color: #CCCCCC;
+}
+
+*/
+#ua_header {margin: 0; padding: 0; border-top: 1px solid #FFF;}
+#ua_header * {margin: 0; padding: 0; }
+#ua_header ul {line-height: 25px; text-align: left; }
+#ua_header li { display: inline; font-size: 1.05em; border-right: 1px dotted #FFF; margin-right: 0.2em; padding: .35em .5em; }
+#ua_header li a { color: #FFF; text-decoration: none; }
+#ua_header .no_bor { border: 0px; }
+
+#ua_header2 { background-color: #C03; border-top: #FFF solid 1px; border-bottom: #FFF solid 1px; }
+#ua_header2 * {margin: 0; padding: 0; height: 42px;}
+
+#ua_shadow { height: 15px; width: 100%; margin: 0; padding: 0; background-image: url(http://catalog.arizona.edu/2010-11/images/shadow_head.gif); background-repeat: repeat-x; }
+
+#ua_breadcrumb { float: left; margin-bottom: 5px; margin-top: 0px; margin-left: 20px; font-size: 110%;
+	font-family: Arial, Helvetica, sans-serif; }
+#ua_breadcrumb * { margin: 0; padding: 0; }
+
+#ua_breadcrumb li {
+	display: inline;
+	padding: 1em;
+	background-image: url(../images/bullet.gif);
+	background-repeat:no-repeat;
+	background-position: center left;
+	font-size: .85em;
+}
+ 
+#ua_breadcrumb a:link,
+#ua_breadcrumb a:visited { color: #036; text-decoration: none; }
+#ua_breadcrumb a:hover { color: #C03; text-decoration: underline; }
+
+/*Header bottom - white line */
+#header_bottom { background-color: #C03; border-bottom: .5px solid #FFF; border-top: 1px solid #FFF; clear: both; }
+
+#ua_footer { clear: left; color: #666; background-image:url(http://catalog.arizona.edu/2010-11/css/img/shadow_foot.gif); background-repeat: repeat-x; text-align: center; margin-top: 10px; }
+#ua_footer * { margin: 0; padding: 0; }
+#ua_footer p { margin-top: 0.5em; font-size: 1.05em; color: #AAA; }
+#ua_footer_logo { height: 20px; background-color: #EEE; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC; margin-bottom: 12px; }
+#ua_footer ul { margin: 0 0 0.5em 0; }
+#ua_footer li { display: inline; padding: 0.05em 1em; color: #AAA; border-left: 1px solid #AAA; }
+#ua_footer li a:link,
+#ua_footer li a:visited { color: #AAA; text-decoration: none; }
+#ua_footer li a:hover { color: #C03; text-decoration: underline; }
+#ua_footer .no_bor { border: 0px; }
+
+/* webcam */
+#webcam { width: 670px; background: #EEE; border: 1px solid #CCC; margin-bottom: 5px;  padding: 5px; clear: both;}
+#webcam ul { text-align: left; }
+#webcam li { display: inline; margin-left: -1px; line-height: 1.2em; }
+#webcam ul a:link, #webcam ul a:visited { padding:.3em .9em; background-color:#999; text-decoration: none; color: #FFF; font-size: .95em; font-weight: bold; }
+#webcam ul a:hover {  background-color: #999; color: #000; }
+#webcam ul .webcam_current a { background-color: #666; }
+#webcam .webcam_photo {  border: 2px solid #666; margin-bottom: 5px; }
+#webcam .webcam_caption { text-align: right; color: #036; font-size: 0.8em; }
+#webcam p { margin: 0; padding: 0; }
+/* webcam_big */
+#webcam_big { margin: 0; width: 402px; padding: 3px; border: 1px solid #CCC; background: #EEE; float: left; }
+#webcam_big .webcam_photo {  border: 1px solid #666; }
+#webcam_big ul { text-align: right; padding: 0; margin: 3px 2px 0 0; }
+#webcam_big li { display: inline; padding-left: 10px; margin-left: 10px; background-image: url(http://catalog.arizona.edu/images/lrg_webcam_bullet.gif); background-repeat: no-repeat; background-position: left center; }
+#webcam_big a:link, #webcam_big a:visited { color: #036; text-decoration: none; font-size: 1em; }
+#webcam_big a:hover { color: #C03; text-decoration: underline; }
+}
+
+.seal { float: center;  z-index: 50; position: relative; top: -20px; width: 140px; height: 133px; margin-bottom: -26px; }

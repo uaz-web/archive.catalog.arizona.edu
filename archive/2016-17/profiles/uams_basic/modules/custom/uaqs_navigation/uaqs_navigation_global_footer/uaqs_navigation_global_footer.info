@@ -1,0 +1,11 @@
+name = UAQS Navigation Global Footer
+description = Provides a global footer menu
+core = 7.x
+package = The University of Arizona
+dependencies[] = bean
+dependencies[] = menu_bean
+dependencies[] = migrate
+dependencies[] = uaqs_navigation
+stylesheets[all][] = css/uaqs_navigation_global_footer.css
+files[] = import/uaqs_navigation_global_footer.inc
+files[] = import/uaqs_navigation_global_footer_bean.inc

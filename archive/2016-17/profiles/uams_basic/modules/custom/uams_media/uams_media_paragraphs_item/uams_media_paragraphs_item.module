@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UAMS Media Paragraphs Item feature.
+ */
+
+include_once 'uams_media_paragraphs_item.features.inc';

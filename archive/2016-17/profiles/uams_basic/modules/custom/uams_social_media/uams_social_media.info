@@ -1,0 +1,7 @@
+; $Id$
+name = UA Sites Social Media Links
+description = "Adds block for social media links"
+package = UA Sites
+core = 7.x
+configure = admin/config/search/uams_social_media
+stylesheets[all][] = css/uams_social_media.css

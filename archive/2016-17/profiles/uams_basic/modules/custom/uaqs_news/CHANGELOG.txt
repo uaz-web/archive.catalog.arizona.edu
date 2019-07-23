@@ -1,0 +1,39 @@
+7.x-1.0-alpha3, 2015-11-13
+------------------------------
+- UADIGITAL-375: Reverting some unexpected feature updates.
+- Merged in macaulay/ua_news/uadigital-375 (pull request #11).
+- UADIGITAL-375: Added subtitle field to the News content type and placed it to display under the title field.
+- Merged macaulay/ua_news into 7.x-1.x.
+- Back to dev.
+- Merged ua_drupal/ua_news into 7.x-1.x.
+
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #10).
+- UADIGITAL-322: Changes from feature module updates.
+- Merged in mmunro-ltrr/ua_news/UADIGITAL-302 (pull request #9).
+- Limit the ua_news_photo height in the UA News node display to match the featured content banner on the front page.
+- Merged ua_drupal/ua_news into 7.x-1.x.
+- Merged in macaulay/ua_news (pull request #8).
+- Put newest news items first in the views and made the front page block respect the 'Show on Front Page' boolean.
+- Merged in mmunro-ltrr/ua_news/UADIGITAL-139 (pull request #6).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Renaming README for consistency's sake.
+- Cleaning up UA News .info file in anticpation of release.
+- Merged in macaulay/ua_news (pull request #4).
+- Moved and renamed css file, updated .info reference, and updated readme name. Issue: UADIGITAL-77.
+- Merged macaulay/ua_news into 7.x-1.x.
+- Changed package name to be consistent with other features.
+- Merged ua_drupal/ua_news into 7.x-1.x.
+- Merged in macaulay/ua_news (pull request #3).
+- Included spotlight image style dependency for news spotlights.
+- Added views and styling to the news feature.
+- Removed project line to prevent complications.
+- Keeping w/ conventions: changed version to 7.x-1.x-dev.
+

@@ -1,0 +1,85 @@
+<?php
+/**
+ * @file
+ * Code for the UAQS Featured Content feature.
+ */
+
+include_once 'uaqs_featured_content.features.inc';
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function uaqs_featured_content_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['uaqs_featured_content'] = array(
+    'label' => t('UAQS Featured Content'),
+    'custom settings' => FALSE,
+  );
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function uaqs_featured_content_preprocess_views_view(&$vars) {
+  $view = $vars['view'];
+  if ($view->name == 'uaqs_hero_carousel' && $view->current_display == 'hero_block') {
+    drupal_add_js(drupal_get_path('module', 'uaqs_featured_content') . '/js/modernizr.custom.7860.js');
+    drupal_add_js(drupal_get_path('module', 'uaqs_featured_content') . '/js/uaqs_featured_content.js');
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function uaqs_featured_content_preprocess_node(&$vars) {
+  $wrapper = entity_metadata_wrapper('node', $vars['node']);
+   if ($wrapper->getBundle() == 'uaqs_carousel_item') {
+    $nid = $wrapper->getIdentifier();
+    $path_to_node = url("node/$nid");
+    $has_cta = FALSE;
+    $vars['uaqs_featured_content']['image_path'] = '';
+    if (field_info_instance('node', 'field_uaqs_photo', $wrapper->getBundle()) && isset($wrapper->field_uaqs_photo)) {
+      $photos = $wrapper->field_uaqs_photo;
+      $photo = $photos->file->value();
+      $slide_image_uri = $photo->uri;
+      $slide_styled_path = image_style_url('flexslider_full', $slide_image_uri);
+      $vars['uaqs_featured_content']['image_path'] = $slide_styled_path;
+    }
+
+    if (field_info_instance('node', 'field_uaqs_link', $wrapper->getBundle())) {
+      $has_cta = $wrapper->field_uaqs_link->value();
+      if (isset($has_cta)) {
+        $vars['uaqs_featured_content']['path'] = $wrapper->field_uaqs_link->url->value();
+      }
+      else {
+        $vars['uaqs_featured_content']['path'] = $path_to_node;
+      }
+    }
+    else {
+      $vars['uaqs_featured_content']['path'] = $path_to_node;
+    }
+
+    if ($vars['view_mode'] == 'uaqs_featured_content') {
+      $vars['theme_hook_suggestions'][] = 'node__uaqs_featured_content';
+    }
+   }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function uaqs_featured_content_theme_registry_alter(&$theme_registry) {
+  // Find all .tpl.php files in this module's folder recursively.
+  $module_path = drupal_get_path('module', 'uaqs_featured_content');
+  $template_file_objects = drupal_find_theme_templates($theme_registry, '.tpl.php', $module_path);
+
+  // Iterate through all found template file objects.
+  foreach ($template_file_objects as $key => $template_file_object) {
+    // If the template has not already been overridden by a theme.
+    if (!isset($theme_registry[$key]['theme path']) || !preg_match('#/themes/#', $theme_registry[$key]['theme path'])) {
+      // Alter the theme path and template elements.
+      $theme_registry[$key]['theme path'] = $module_path;
+      $theme_registry[$key] = array_merge($theme_registry[$key], $template_file_object);
+      $theme_registry[$key]['type'] = 'module';
+    }
+  }
+}

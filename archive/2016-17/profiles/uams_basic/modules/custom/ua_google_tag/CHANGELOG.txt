@@ -1,0 +1,14 @@
+7.x-1.0-alpha3, 2015-10-16
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #3).
+- UADIGITAL-322: Changes from features module updates.
+- Merged in UADIGITAL-144 (pull request #2).
+- UADIGITAL-144: Removing defaultconfig & user permissions.
+- Merged in mmunro-ltrr/ua_google_tag/UADIGITAL-144 (pull request #1).
+- Add excluded dependencies, delete menu handling, add a sub-makefile.
+- Remove the explicit version number, to match the other repositories.
+

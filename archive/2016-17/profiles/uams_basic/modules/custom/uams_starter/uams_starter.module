@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * uams_starter.module
+ */
+
+/**
+ * Implements hook_migrate_api().
+ *
+ * @todo Investigate why setting the 'import_root' argument doesn't work at the
+ *   group level. Should work. https://www.drupal.org/node/1824884
+ */
+function uams_starter_migrate_api() {
+  $import_root = drupal_get_path('module', 'uams_starter') . '/import';
+
+  $api = array(
+    'api' => 2,
+    'groups' => array(
+      'uams_starter' => array(
+        'title' => t('UA Sites Starter Content'),
+// This should work...
+//        'import_root' => $import_root,
+      ),
+    ),
+    'migrations' => array(
+      'UamsStarterPage' => array(
+        'class_name' => 'UamsStarterPageMigration',
+        'group_name' => 'uams_starter',
+        'import_root' => $import_root,
+      ),
+    ),
+  );
+  return $api;
+}

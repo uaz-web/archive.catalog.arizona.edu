@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * uaqs_core.module
+ */
+
+/**
+ * Implements hook_migrate_api().
+ */
+function uaqs_core_migrate_api() {
+  $api = array(
+    'api' => 2,
+  );
+  return $api;
+}

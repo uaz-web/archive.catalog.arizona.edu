@@ -1,0 +1,237 @@
+﻿.hide {
+	display: none;
+}
+
+/*** TOP ***/
+#container_top {
+	margin: 0
+	padding: 0;
+	width: auto;
+	text-align: left;
+	vertical-align: top;
+}
+#container_top p { margin: 0.5em 0 0 0; }
+#container_top b { font-weight: bold; color:#C03; }
+
+/*** LEFT ***/
+#container_left {
+	width: 150px;
+	margin: 0;
+	padding: 6px;
+	border: 1px solid #036;
+	background: #e9e9ea;
+	text-align: left;
+	vertical-align: top;	
+}
+
+#container_left a:link,
+#container_left a:visited { color: #036; text-decoration: none;	font-size: 12px; }
+#container_left a:hover { color: #C03; text-decoration: underline; 	font-size: 12px;}
+
+/*** CENTER ***/
+#container_center {
+	width:auto;
+	margin: 0 auto;
+	padding: 30px;
+	border: 1px solid #036;
+	text-align: right;
+	vertical-align: top;
+	float: center;
+	background-color: #ffffff;
+}
+#container_center p {
+	margin: 0.0em 0 0 0;
+	
+}
+#container_center .button {
+	border-style: solid; 
+	border-color: #ccc;
+	border-width: 1px; 
+	color: #000; 
+	background-color: #eee;
+}
+
+/*** CENTER ERROR ***/
+#container_center .error {
+	color: #C03;
+	font-size: 12px; 
+	font-weight: bold;
+	text-align: center;
+	width: auto;
+	margin: 0 0 0 0;
+	padding: 2px;
+	border: 1px solid #C03;
+	background-color: #ffc;
+	text-align: left;
+	vertical-align: top;
+	/*display: none;*/
+}
+/*** CENTER SUCCESS ***/
+#container_center .success {
+	color: #393;
+	font-size: 12px; 
+	font-weight: bold;
+	text-align: center;
+	width: auto;
+	margin: 0 0 0 0;
+	padding: 4px;
+	border: 1px solid #393;
+	background-color: #ffc;
+	text-align: left;
+	vertical-align: top;
+	/*display: none;*/
+}
+/*** CENTER FORMS ***/
+#container_center fieldset {
+	margin-top: 5px;
+}
+
+#container_center input.text {
+	border: #036 solid 1px;
+}
+#container_center input.info {
+	border: #036 solid 1px;
+	background-color: #eee;
+}
+#container_center input.deleted {
+	text-decoration: line-through;
+	border: #036 solid 1px;
+	background-color: #eee;
+}
+#container_center textarea.text {
+	border: #036 solid 1px;
+}
+#container_center textarea.deleted {
+	text-decoration: line-through;
+	border: #036 solid 1px;
+	background-color: #eee;
+}
+#container_center span.display {
+	color: #036;
+	font-weight: bold;
+}
+#container_center span.disabled {
+	color: #666;
+}
+#container_center div.buttons {
+	padding: 5px 0 5px 0;
+	text-align: center;
+}
+
+
+/*** CENTER GRIDS ***/
+#container_center table {
+	width: 100%;
+}
+/* EVEN */
+#container_center tr.a {
+	background-color: #fff;
+}
+/* ODD */
+#container_center tr.b {
+	background-color: #f3f3f3;
+}
+/* GROUP */
+#container_center tr.c {
+	font-weight: bold;
+	color: #fff;
+	background-color: #036;
+}
+/* EDIT */
+#container_center tr.e {
+	background-color: #ffc;
+}
+#container_center tr.e input {
+	border-color: #7F9DB9;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #ffc;
+}
+#container_center tr.e select {
+	border-color: #7F9DB9;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #ffc;
+}
+
+#container_center th a:link,
+#container_center th a:visited { color: #C03; text-decoration: none; }
+#container_center th a:hover { color: #C03; text-decoration: underline; }
+
+#container_center tr.h {
+	color: #C03;
+}
+#container_center tr.h a:link,
+#container_center tr.h a:visited { color: #036; text-decoration: none; }
+#container_center tr.h a:hover { color: #C03; text-decoration: underline; }
+
+/* HEADERS on forms */
+#container_center td.h 
+{
+	font-weight: bold;
+	color: #C03;
+}
+
+#container_center td.label {
+	width: 100px;
+}
+
+/* container_center list elements */
+
+#container_center li { font-size:12px; }
+
+/*** RIGHT ***/
+#container_right {
+	width: 120px;
+    height: 100px;    *** use for single (blue) line header
+	/*	height: 345px; /* *** use for double (blue/red) line header */
+	margin: 0;
+	padding: 2px;
+	border: 1px solid #036;
+	background-color: #e9e9ea;
+	text-align: left;
+	vertical-align: top;
+	float: right;
+}
+
+#container_right p { font-size:12px; margin: 0.5em 0px 0px 0px; }
+#container_right ul { margin: 0.3em 0px 0.3em 1.5em; }
+#container_right li { font-size:12px; }
+
+#gray_column { width: 200px; height: auto; padding: 10px; float: right; background-color: #EEE; border: 1px solid #CCC; margin: 10px 0 20px 0; vertical-align: top; }
+#gray_column img { border: 1px solid #666; margin: 10px 0; }
+#gray_column a { text-decoration: none; }
+#gray_column p { font-size: 1.05em; }
+#gray_column h4 { margin: .4em 0; padding: .5em 0 0 0;}
+/*#gray_column h4 { margin: .4em 0; padding: .5em 0 0 0; border-top: 1px dotted #CCC; }*/
+#gray_column .more { text-align: right; list-style: none; }
+
+.type2 { font-size: 1.1em; margin: 0 0 0 15px; } /* use this list for all gray_column lists */
+.type2 li { list-style-image: url(http://catalog.arizona.edu/images/circle_bullet.gif); padding: .12em 0; }
+.type2 a:link { text-decoration: none; }
+.type2 a:visited { text-decoration: none; }
+.type2 a:hover { text-decoration: underline; }
+
+/* footer */
+
+#footer { clear: left; color: #036; background-image:url(http://catalog.arizona.edu/img/footer_bg.gif); background-repeat: repeat-x; text-align: center; }
+#footer p { margin-top: .3em; font-size: 1.05em; color: #036;}
+#footer_logo { height: 20px; background-color: #EEE; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC; margin-bottom: 12px; }
+#footer_text { font-size: 12px; color: #036; text-align: center; padding: 10px;}
+.footer_links { margin-bottom: 0.5em; font-size: 1.07em; text-align: center; color: #036;}
+.footer_links li { display: inline;  padding: 0.05em 1em;  border-right: 1px solid #ccc; color: #036; }
+.footer_links a:link, .footer_links a:visited { color: #036; text-decoration: none; }
+.footer_links a:hover { color: #C03; text-decoration: underline; }
+.footer_links .no_bor { border: 0px; }
+.historic_photo { margin-top: 10px; } 
+
+#allcat_col1 { width: 85%; margin: 10px 15px 0 0; min-width: 250px; background-color: #FFF; float: left; }
+#col1 { width: 70%; margin: 10px 15px 0 0; min-width: 250px; background-color: #FFF; float: left; }
+#col1 ul { padding: 10px; list-style-image: url(http://catalog.arizona.edu/images/circle_bullet.gif); margin-left: 60px; }
+#col1 li { margin: .05em 0; }
+#col1 li p { margin: 1px 0 3px 0; }
+#col1 h2 { display: inline; }
+#col1 h4 { display: inline; margin-left: 10px;  }
+#col1 .name { list-style-image: url(../images/bullet.gif); margin-left: -10px; border-bottom: 0px; padding-bottom: 0px; margin-bottom: 0px; }
+#col1 li a:link, #col1 li a:visited { color: #036; text-decoration: underline; margin-top: 10px; }
+#col1 li a:hover { color: #C03; text-decoration: underline; }

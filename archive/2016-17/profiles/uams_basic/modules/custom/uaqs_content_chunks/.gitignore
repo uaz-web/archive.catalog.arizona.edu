@@ -1,0 +1,4 @@
+# Exclude modules/themes/libraries
+libraries
+modules
+themes

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UAQS Person feature.
+ */
+
+include_once 'uaqs_person.features.inc';

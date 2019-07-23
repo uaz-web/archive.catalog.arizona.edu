@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<title>Pathology, UA Catalog</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="/2013-14/css/catalog.css">
+<link rel="stylesheet" type="text/css" href="../css/framework.css">
+
+
+<style type="text/css">
+.style1 {
+	text-align: left;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" style="text-align: right">
+
+<div class="clear"></div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<iframe src="../borders/top.htm" scrolling="no" marginwidth="0" marginheight="0" frameBorder="0"  style="border-style: none; width: 100%; height: 95px; "></iframe>
+</td></tr></table><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+<iframe src="../borders/left.htm" frameBorder="0" scrolling="no" style="border-style: none; width: 240px; height: 718px; "></iframe>
+</td><td valign="top" width="24"></td><td valign="top"><h2 align="center">Departments, Schools, Colleges</h2>
+<h4 align="center">PATHOLOGY</h4>
+  <p align="left"><b>Contact Information:</b></p>
+  <!--webbot bot="Include" u-include="../contacts/PATH.html" tag="BODY" startspan -->
+
+<CENTER>
+<TABLE WIDTH="96%">
+<TR>
+<TD VALIGN=TOP WIDTH=48%>
+
+Department of Pathology<BR>
+The University of Arizona<BR>Arizona Health Sciences Center, 5205<BR>1501 North Campbell Ave<BR>PO Box 245043<BR>Tucson, AZ 85724-5043
+
+</TD>
+<td width=4%> 
+</td>
+<TD VALIGN=TOP WIDTH=48%>
+
+Phone:  (520) 626-6097, Fax: 626-1027<BR>Email:  <A HREF="mailto:maureend@email.arizona.edu">maureend@email.arizona.edu</A><BR>Web: 
+<img src="/2011-12/images/globe-external.gif" alt="External Link" width="15" height="15"> 
+<a href="http://pathology.arizona.edu/">Department Homepage </a>
+</TD></TR></TABLE></center>
+
+<!--webbot bot="Include" i-checksum="56196" endspan --><p class="style1">
+<strong>Offers courses in:</strong></p>
+<ul>
+	<li>
+	<p class="style1">&nbsp;PATH - Pathology</p>
+	</li>
+</ul>
+<p>Medical student electives are described in the <img alt="External Link" src="/2011-12/images/globe-external.gif" border="0" width="15" height="15">
+<a href="http://www.medicine.arizona.edu/curricularaffairs/electives/el_dept_list.html">College
+of Medicine Electives Manual</a>.</p>
+Faculty members are listed on the department homepage.
+    <p>The Department of Pathology is in the <a href="med.shtml">College
+    of Medicine</a>.</p>
+  <p>Pathology is a broad-based discipline involving the study of the mechanisms
+  of disease at the molecular, cellular, tissue and organ levels. Research in
+  experimental pathology utilizes the techniques of modern biology, including
+  recombinant DNA technologies, immunochemistry methods, electron microscopy and
+  a variety of <i>in</i> <i>vitro</i> and <i>in</i> <i>vivo</i> model systems.
+  The applicability of the findings in the experimental pathology laboratory is
+  frequently tested on tissue samples and body fluids from patients.</p>
+  <p>Both basic and clinical pathology principles are featured in medical
+  student, resident and graduate student teaching. Students are provided with
+  knowledge of disease processes upon which to build a comprehensive
+  understanding of the biomedical literature in other disciplines as well as
+  pathology. Current concepts arising from the most recent laboratory findings
+  are constantly introduced into the curriculum. Educational and research
+  programs focus on a wide spectrum of health care problems including cancer,
+  AIDS, heart disease, genetic diseases, aging, immune disorders and neurologic
+  diseases.</p>
+  <p><b>For more information contact the department
+  listed above.</b></p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

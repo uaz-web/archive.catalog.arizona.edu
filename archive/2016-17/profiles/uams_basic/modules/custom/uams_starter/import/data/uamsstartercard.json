@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "label": "Card Block",
+    "title": "Card Block",
+    "uaqs_text_area": "This is a card block. It can be used in a number of ways: As seen here - image, text, call to action Or just an image or call to action",
+    "uaqs_photo": "card_block_1.jpg",
+    "uaqs_link": "http://www.arizona.edu/ua-traditions",
+    "uaqs_link_title": "Learn more",
+    "uaqs_link_attributes": {
+        "class": "",
+        "target": "_blank"
+    },
+    "region": "sidebar_second",
+    "visibility": "1",
+    "pages": "about",
+    "weight": "3"
+  }
+]

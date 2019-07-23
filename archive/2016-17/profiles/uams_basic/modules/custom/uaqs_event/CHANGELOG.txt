@@ -1,0 +1,48 @@
+7.x-1.0-alpha3, 2015-11-13
+------------------------------
+- UADIGITAL-375: Reverting some unexpected feature updates.
+- Merged in macaulay/ua_event/uadigital-375 (pull request #10).
+- UADIGITAL-375: Added subtitle field to the Event content type and placed it to display under the title field.
+- Back to dev.
+
+7.x-1.0-alpha2, 2015-10-16
+------------------------------
+- Merged in UADIGITAL-322 (pull request #9).
+- UADIGITAL-322: Changes from features & date module updates.
+- Merged in mmunro-ltrr/ua_event/UADIGITAL-302 (pull request #8).
+- Apply an image style limiting the ua_event_photo to a height of 460px.
+- Merged ua_drupal/ua_event into 7.x-1.x.
+- UADIGITAL-232: Merged in macaulay/ua_event (pull request #7).
+- Renamed full calendar page to 'Calendar' kept title as 'Events' on block display.
+- Removed 'UA' from view's page title.
+- Merged in mmunro-ltrr/ua_event/UADIGITAL-139 (pull request #6).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Merged in UADIGITAL-108 (pull request #5).
+- UADIGITAL-108: Removing views_ui as dependency.
+- Merged in macaulay/ua_event (pull request #4).
+- Merge branch '7.x-1.x' of https://bitbucket.org/macaulay/ua_event into 7.x-1.x.
+- Moved and renamed css file and updated .info file reference. Issue: UADIGITAL-77.
+- Merged macaulay/ua_event into 7.x-1.x.
+- Merged ua_drupal/ua_event into 7.x-1.x.
+- Ua_event.info edited online with Bitbucket - version changed to 7.x-1.x-dev.
+- Changed package name to be consistent with other features.
+- Removed project line to prevent complications.
+- Merged in macaulay/ua_event (pull request #3).
+- README.md edited online with Bitbucket.
+- Added note in the readme about which version of the date module should be installed for proper display on the Full Calendar view (issue: https://www.drupal.org/node/2294973).
+- Added views and styling for displays - no node styling yet.
+- Feature did not work properly - changed some settings to exclude Strongarm since Strongarm isn't really needed in this case.
+- Added views and styling for views to feature.
+- Merged in joegraduate/ua_event/rename-README (pull request #2).
+- Renaming README file for consistency.
+- Merged in joegraduate/ua_event/info-file (pull request #1).
+- Misc changes to .info file.
+- Readme.md edited online with Bitbucket.
+- Added sub date modules as dependancies and a readme file.
+

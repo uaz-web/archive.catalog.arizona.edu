@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the paragraphs_view_mode module.
+ */
+
+/**
+ * Implements hook_schema_alter().
+ */
+
+function uaqs_content_chunks_schema_alter(&$schema){
+  if (isset($schema['paragraphs_item'])) {
+    $schema['paragraphs_item']['fields']['view_mode'] = array(
+      'description' => 'View mode of paragraph item.',
+      'type' => 'varchar',
+      'length' => 32,
+      'default' => 'default',
+    );
+  }
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function uaqs_content_chunks_install() {
+  $schema['paragraphs_item'] = array();
+  uaqs_content_chunks_schema_alter($schema);
+  foreach ($schema['paragraphs_item']['fields'] as $name => $spec) {
+    db_add_field('paragraphs_item', $name, $spec);
+  }
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function uaqs_content_chunks_uninstall() {
+  $schema['paragraphs_item'] = array();
+  uaqs_content_chunks_schema_alter($schema);
+  foreach ($schema['paragraphs_item']['fields'] as $name => $spec) {
+    db_drop_field('paragraphs_item', $name);
+  }
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<title>Pharmacology, UA Catalog</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="/2014-15/css/catalog.css">
+<link rel="stylesheet" type="text/css" href="../css/framework.css">
+
+
+<style type="text/css">
+.style1 {
+	text-align: left;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" style="text-align: right">
+
+<div class="clear"></div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<iframe src="../borders/top.htm" scrolling="no" marginwidth="0" marginheight="0" frameBorder="0"  style="border-style: none; width: 100%; height: 95px; "></iframe>
+</td></tr></table><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+<iframe src="../borders/left.htm" frameBorder="0" scrolling="no" style="border-style: none; width: 240px; height: 718px; "></iframe>
+</td><td valign="top" width="24"></td><td valign="top"><h2 align="center">Departments, Schools, Colleges</h2>
+<h4 align="center">PHARMACOLOGY</h4>
+<p><b>Contact Information:</b></p>
+<!--webbot bot="Include" u-include="../contacts/PHCL.html" tag="BODY" startspan -->
+
+<CENTER>
+<TABLE WIDTH="96%">
+<TR>
+<TD VALIGN=TOP WIDTH=48%>
+
+Department of Pharmacology<BR>
+The University of Arizona<BR>Arizona Health Sciences Center, 5103A<BR>1501 North Campbell Ave<BR>PO Box 245050<BR>Tucson, AZ 85724-5050
+
+</TD>
+<td width=4%> 
+</td>
+<TD VALIGN=TOP WIDTH=48%>
+
+Phone:  (520) 626-7218<BR>Fax: (520) 626-3506<BR>Email:  
+<a href="mailto:vhealey@email.arizona.edu">vhealey@email.arizona.edu</a><BR>Web: 
+<img src="/2011-12/images/globe-external.gif" alt="External Link" width="15" height="15"> <a href="http://www.pharmacology.arizona.edu">Department Homepage</a><BR>
+</TD></TR></TABLE></center>
+
+<!--webbot bot="Include" i-checksum="32882" endspan --><p class="style1">
+<strong>Offers courses in:</strong></p>
+<ul>
+	<li>
+	<p class="style1">PHCL - Pharmacology</p>
+	</li>
+</ul>
+Medical student electives are described in the <img alt="External Link" border="0" height="15" src="/2011-12/images/globe-external.gif" width="15">
+  <a href="http://www.medicine.arizona.edu/curricularaffairs/electives/el_dept_list.html">College
+  of Medicine Electives Manual</a>.
+<p><b><font size="3">Degrees, Majors, Minors and Certificates</font></b></p>
+<blockquote>
+	<p><b>Graduate Degrees</b> -- consult the <img src="/2011-12/images/globe-external.gif" border="0" width="15" height="15">
+  <a href="http://grad.arizona.edu/Catalog">Graduate Catalog</a> or
+  department office for details.</p>
+  <ul>
+    <li>Master of Science (M.S.)
+    <li>Doctor of Philosophy (Ph.D.)</li>
+  </ul>
+  <p><b>Major and Degrees</b></p>
+  <ul>
+    <li>Medical Pharmacology, M.S.</li>
+	  <li>Medical Pharmacology, Ph.D.</li>
+  </ul>
+</blockquote>
+<p>&nbsp;</p>
+<p>The Department of Pharmacology is in the <a href="med.shtml">College
+of Medicine</a>.</p>
+<p>Information about the degree programs is available on the
+<a href="http://www.pharmacology.arizona.edu/graduateinfo.cfm">department 
+homepage</a>. </p>
+<p><b>For more information contact the department office listed
+above.</b></p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+﻿/* CSS Document */
+
+html, body { margin: 0; padding: 0; font-family: Arial, Avenir, "Lucida Grande", Verdana, Helvetica, sans-serif; font-size: 100%;
+background-color: #FFF; font-size medium }
+img { border: 0; }
+p { font-size: .85em;}
+li { font-size: .85em;}
+h1 { font-size: medium; color: #036; margin: 0; padding: 0;}
+h2 { font-size: medium; color: #036; margin: 0; padding: 0;}
+h3 { font-size: medium; color: #036; margin: 0; padding: 0;}
+h4 { font-size: small; color: #036; }
+h5 { font-size: medium; color: #000000; margin: 0; padding: 0; }
+ul {line-height: 25px; text-align: left; } 
+
+
+//div { margin: 0; padding: 0; }
+
+a:link,
+a:visited { color: #036; }
+a:hover { color: #C03; }
+
+.bold { font-weight: bold; }
+.italic { font-style:italic; }
+.bold_italic { font-weight: bold; font-style: italic; }
+
+.padleft { padding-left: 30px; background-color: #036;}
+.padright { padding-right: 40px; }
+.floatleft { float: left; }
+.floatright { float: right; }
+.clear { clear: both; }
+.copyright {text-align: center;}
+.indent {margin-left: 2em;}
+.title { padding: 0 0 0.3em 0; margin: 0; clear: both; }
+.border { border: 1px solid #666; }
+
+
+.hide {
+	display: none;
+}
+
+.clear {
+clear:both;
+}
+
+
+/*** Banner ***/
+
+
+#ua_banner {
+	height: 95px;
+	background-image: url(../images/background2.jpg) ;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*** Breadcrumbs ***/
+
+
+#ua_breadcrumb li {
+	display: inline;
+	padding: 1em;
+	background-image: url(../images/bullet.gif);
+	background-repeat:no-repeat;
+	background-position: center left;
+	font-size: .85em;
+}
+ 
+#ua_breadcrumb a:link,
+#ua_breadcrumb a:visited { color: #036; text-decoration: none; }
+#ua_breadcrumb a:hover { color: #C03; text-decoration: underline; }
+
+
+/*** Content Wrapper ***/
+
+#wrapper
+{width:1006px;
+margin: 0 auto;
+padding:0px 16px 16px 16px;
+}
+
+
+/*** LEFT ***/
+#container_left {
+	float: left; 
+	margin: 15px;
+	margin-bottom: 15px;
+	padding: 6px 6px 24px 6px;
+	text-align: left;
+	vertical-align: top;
+	
+
+}
+	
+	
+	#container_left a:link, 
+	#container_left a:visited { color: #036; text-decoration: none; }
+	#container_left a:hover { color: #C03; text-decoration: underline;}
+	
+	.lfrontpage
+	{border-right: 1px solid #036; 
+	background: #FFF;
+	min-width: 140px;
+	height: 732px;}
+	
+
+#container_center {
+	
+    width: auto; 
+	padding: 15px;
+	margin-top: 0px;
+	margin-left: 140px; 
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+	
+}
+
+
+/* footer */
+
+#footer { clear: left; color: #036; background-image:url(http://catalog.arizona.edu/img/footer_bg.gif); background-repeat: repeat-x; text-align: center; }
+#footer p { margin-top: .3em; font-size: 1.05em; color: #036;}
+#footer_logo { height: 20px; background-color: #EEE; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC; margin-bottom: 12px; }
+#footer_text { font-size: 12px; color: #036; text-align: center; padding: 10px;}
+.footer_links { margin-bottom: 0.5em; font-size: 1.07em; text-align: center; color: #036;}
+.footer_links li { display: inline;  padding: 0.05em 1em;  border-right: 1px solid #ccc; color: #036; }
+.footer_links a:link, .footer_links a:visited { color: #036; text-decoration: none; }
+.footer_links a:hover { color: #C03; text-decoration: underline; }
+.footer_links .no_bor { border: 0px; }
+.historic_photo { margin-top: 10px; } 
+
+#ua_footer { clear: left; color: #666; background-image:url(http://catalog.arizona.edu/2012-13/css/img/shadow_foot.gif); background-repeat: repeat-x; text-align: center; margin-top: 10px; }
+#ua_footer * { margin: 0; padding: 0; }
+#ua_footer p { margin-top: 0.5em; font-size: 1.05em; color: #AAA; }
+#ua_footer_logo { height: 20px; background-color: #EEE; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC; margin-bottom: 12px; }
+#ua_footer ul { margin: 0 0 0.5em 0; }
+#ua_footer li { display: inline; padding: 0.05em 1em; color: #AAA; border-left: 1px solid #AAA; }
+#ua_footer li a:link,
+#ua_footer li a:visited { color: #AAA; text-decoration: none; }
+#ua_footer li a:hover { color: #C03; text-decoration: underline; }
+#ua_footer .no_bor { border: 0px; }
+
+
+
+
+#allcat_col1 { width: 85%; margin: 10px 15px 0 0; min-width: 250px; background-color: #FFF; float: left; }
+#col1 { width: 70%; margin: 10px 15px 0 0; min-width: 250px; background-color: #FFF; float: left; }
+#col1 ul { padding: 10px; list-style-image: url(http://catalog.arizona.edu/images/circle_bullet.gif); margin-left: 60px; }
+#col1 li { margin: .05em 0; }
+#col1 li p { margin: 1px 0 3px 0; }
+#col1 h2 { display: inline; }
+#col1 h4 { display: inline; margin-left: 10px;  }
+#col1 .name { list-style-image: url(../images/bullet.gif); margin-left: -10px; border-bottom: 0px; padding-bottom: 0px; margin-bottom: 0px; }
+#col1 li a:link, #col1 li a:visited { color: #036; text-decoration: underline; margin-top: 10px; }
+#col1 li a:hover { color: #C03; text-decoration: underline; }

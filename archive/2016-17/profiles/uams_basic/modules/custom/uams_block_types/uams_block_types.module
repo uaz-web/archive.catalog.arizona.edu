@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the UAMS Block types feature.
+ */
+
+include_once 'uams_block_types.features.inc';

@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Code for the UAMS_News_feeds feature.
+ */
+
+include_once 'uams_news_feeds.features.inc';
+
+/**
+  * Implement hook_enable()
+  */
+function uams_news_feeds_post_features_enable_feature() {
+    // rebuild feature
+    features_rebuild();
+
+   // Run the feed importer
+    $source = feeds_source('uams_news');
+    $source->import();
+}

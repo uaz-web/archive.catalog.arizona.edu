@@ -1,0 +1,52 @@
+7.x-1.0-alpha5, 2016-05-02
+------------------------------
+- Back to dev.
+
+7.x-1.0-alpha4, 2016-04-28
+------------------------------
+- Merged in barrettbaffert/uaqs_fields/UADIGITAL-688-removeedit-styles-in-wysiw (pull request #15).
+- UADIGITAL-688 updated field style settings for sytle drop down in ckeditor.
+- Merged in trackleft/uaqs_fields/UADIGITAL-697-ckeditor-only-shows-up-for (pull request #14).
+- With martin's update to permissions.
+- Creating permissions for text format display.
+- UADIGITAL-697 making text format selection hidden instead of access denied.
+- Merged ua_drupal/uaqs_fields into 7.x-1.x.
+- Merged in mmunro-ltrr/uaqs_fields/UADIGITAL-66 (pull request #13).
+- Steal all the best changes from UADIGITAL-656 (WYSIWG editor settings), include UADIGITAL-660 suggestions.
+- Merged in mmunro-ltrr/uaqs_fields/UADIGITAL-402-featureful (pull request #12).
+- Use the actual format definitions for further details.
+- Remove the theme-prefixed field formatting override functions.
+- Move the permissions on the text formats to Defaultconfig.
+- Add new text formats, plagiarize code from the better_formats module setting a default format.
+- Merged in UADIGITAL-620 (pull request #9).
+- UADIGITAL-517: Adding telephone module.
+- UADIGITAL-620: Adding bootstrap card view mode for taxonomy terms.
+- UAMS-216:  Adding sidebar media list view mode.
+- Adding sidebar media list view mode.
+- UADIGITAL-604: Adding fences module.
+- UADIGITAL-590: Removing field_uaqs_more_info.
+- Merged in trackleft/uaqs_fields/UAMS-63-quick-links-block (pull request #3).
+- Adding links with unlimited cardinality.
+- Merged in trackleft/uaqs_fields/UADIGITAL-535 (pull request #2).
+- UADIGITAL-535.
+- Merged in trackleft/uaqs_fields-tmp (pull request #1).
+- Change machine name for bean card overlay view mode to uaqs_card_overlay.
+- Block overlay display mode.
+- Add the initial README.md with a short description (without a list of field bases).
+- Remove the node title default config, add a bean label default config.
+- Add a UA Bootstrap Card (uaqs_card) view mode.
+- Add a UA Bootstrap Media List view mode.
+- Add the expiration_date field base.
+- Remove most of the previously created defaultconfig information (for field collections).
+- Allow multi-valued photo fields.
+- Hide titles for cases where it can act as a field, in beans, nodes and taxonomy terms.
+- Move in several of the field bases that Person uses.
+- Replace the subtitle and summary fields by summary and summary_short.
+- Add the link field base (for Featured Content and elsewhere).
+- Remove the dependency on Unit, add a year field base.
+- Remove the description field (for Event).
+- Add the contact and leadership_info field bases.
+- Add the contact_phone field base.
+- Add defaultconfig information (mainly for field collections).
+- Add the initial module files and field bases.
+

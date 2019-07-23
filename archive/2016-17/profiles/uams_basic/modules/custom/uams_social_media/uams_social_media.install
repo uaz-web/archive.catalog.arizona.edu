@@ -1,0 +1,25 @@
+<?php
+
+function uams_social_media_install(){
+  variable_set('uams_social_media_fb_url', 'facebook.com/uarizona');
+  variable_set('uams_social_media_fb_title', 'Click here to visit our Facebook page');
+  variable_set('uams_social_media_li_url', 'linkedin.com/edu/university-of-arizona-17783');
+  variable_set('uams_social_media_li_title', 'Click here to visit our LinkedIn page');
+  variable_set('uams_social_media_twit_url', 'twitter.com/uofa');
+  variable_set('uams_social_media_twit_title', 'Click here to visit our Twitter page');
+  variable_set('uams_social_media_yt_url', 'youtube.com/arizona');
+  variable_set('uams_social_media_yt_title', 'Click here to visit our YouTube page');
+}
+
+function uams_social_media_uninstall(){
+  variable_del('uams_social_media_fb_url');
+  variable_del('uams_social_media_fb_title');
+  variable_del('uams_social_media_li_url');
+  variable_del('uams_social_media_li_title');
+  variable_del('uams_social_media_twit_url');
+  variable_del('uams_social_media_twit_title');
+  variable_del('uams_social_media_yt_url');
+  variable_del('uams_social_media_yt_title');
+}
+
+

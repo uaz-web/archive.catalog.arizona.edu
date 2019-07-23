@@ -1,0 +1,50 @@
+7.x-1.0-alpha3, 2015-10-23
+------------------------------
+- Merged in UADIGITAL-344 (pull request #8).
+- UADIGITAL-344: Updating jquery_update to version 7.x-2.7.
+- Back to dev.
+
+7.x-1.0-alpha2, 2015-10-12
+------------------------------
+- UADIGITAL-307: Fixing dumb syntax error with DB update function.
+- Merged in UADIGITAL-307 (pull request #7).
+- UADIGITAL-307: Don't uninstall Superfish, just disable.
+- UADIGITAL-307: Using correct update number.
+- UADIGITAL-307: Disabling & uninstaling superfish before removing it from makefile.
+- UADIGITAL-212: Merged in trackleft/ua_navigation/UADIGITAL-212-main-navigation-should-use (pull request #6).
+- Remove superfish library.
+- Rebuild feature without superfish.
+- UADIGITAL-156: Fixing custom secondary navigation block definition.
+- Merged in mmunro-ltrr/ua_navigation/UADIGITAL-139 (pull request #5).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
+7.x-1.0-alpha1, 2015-07-10
+--------------------------
+- Preparing to tag 7.x-1.0-alpha1.
+- Merged in mmunro-ltrr/ua_navigation/UADIGITAL-132 (pull request #4).
+- Update Menu Block to the current drupal.org version.
+- Merged in UADIGITAL-113 (pull request #3).
+- UADIGIAL-113: Security update for jquery_update module.
+- Merged in UADIGITAL-105 (pull request #2).
+- UADIGITAL-105: Updating menu_block to 2.6.
+- UADIGITAL-17: Removing Responsive Menus module and libraries.
+- Adding jquery_admin_version variable.  Should fix UADIGITAL-40.
+- Removing 'brand' from various component names.
+- Merged in rename (pull request #1).
+- Updating README.
+- Renaming module, Part II.
+- Renaming module, Part I.
+- Adding all variables for Superfish block (gross).
+- Adding dev/master version of Superfish library (for now).
+- Adding jQuery Update version setting.
+- Documentation updates.
+- Adding secondary links variable.
+- Dev versions of superfish and reponsive menus...
+- Misc fixes.
+- README update.
+- Adding Utility links menu.
+- Renaming Superfish menu.
+- Adding README and updating .info file slightly.
+

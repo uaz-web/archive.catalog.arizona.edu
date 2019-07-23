@@ -1,0 +1,45 @@
+UA Core 7.x-1.0-alpha3, 2015-11-13
+--------------------------------------
+- Merged in mmunro-ltrr/ua_core/UADIGITAL-377 (pull request #9).
+- Bump the version number on Views.
+- Back to dev.
+
+UA Core 7.x-1.0-alpha2, 2015-10-16
+--------------------------------------
+- Merged in UADIGITAL-315 (pull request #8).
+- UADIGITAL-315: Updating features to version 7.x-2.7.
+- Merged in UADIGITAL-283 (pull request #7).
+- UADIGITAL-283: Updating defaultconfig to 1.0-alpha11.
+- Merged in mmunro-ltrr/ua_core/UADIGITAL-208 (pull request #6).
+- Update the Date module version from 2.8 to 2.9, removing the patch to 2.8.
+- Merged ua_drupal/ua_core into 7.x-1.x.
+- Merged in awochna/ua_core (pull request #5).
+- Add patch for Date module to use proper date-based titles for views, like in ua_event module. Should fix UADIGITAL-135, but independent testing by other developers should commence.
+- UADIGITAL-188: Ctools security update.
+- Merged in mmunro-ltrr/ua_core/UADIGITAL-139 (pull request #3).
+- Remove explicit version information.
+- Add a changelog so there is always something to modify for a release.
+- Back to dev.
+
+UA Core 7.x-1.0-alpha1, 2015-07-10
+----------------------------------
+- UADIGITAL-98: Preparing to tag 7.x-1.0-alpha1.
+- Merged in mmunro-ltrr/ua_core/UADIGITAL-132 (pull request #2).
+- Update Features to the current drupal.org version.
+- UADIGITAL-131: Update to Migrate 2.8 for SA-CONTRIB-2015-0130.
+- View security update.
+- Merged in rename (pull request #1).
+- Updating README.
+- Renaming module, Part II.
+- Renaming module, Part I.
+- Moving Zen theme up one directory level.
+- Features module update.
+- Adding Default config module.
+- Documentation updates.
+- Contrib module updates.
+- Adding remaining UA Content Types dependencies to makefile.
+- Makefile update.
+- Changing project name (part 2).
+- Changing project name (part 1).
+- Adding initial makefile and basic module files.
+

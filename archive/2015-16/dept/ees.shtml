@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>School of Earth and Environmental Sciences, UA Catalog</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="/2015-16/css/catalog.css">
+<link rel="stylesheet" type="text/css" href="../css/framework.css">
+
+
+<style type="text/css">
+.style1 {
+	margin-left: 40px;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" style="text-align: right">
+
+<div class="clear"></div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+<iframe src="../borders/top.htm" scrolling="no" marginwidth="0" marginheight="0" frameBorder="0"  style="border-style: none; width: 100%; height: 95px; "></iframe>
+</td></tr></table><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+<iframe src="../borders/left.htm" frameBorder="0" scrolling="no" style="border-style: none; width: 240px; height: 718px; "></iframe>
+</td><td valign="top" width="24"></td><td valign="top"><body>
+
+<h2 align="center">Departments, Schools, Colleges</h2>
+  <h4 align="center">SCHOOL OF EARTH AND ENVIRONMENTAL SCIENCES</h4>
+  <p align="left"><b>Contact Information:</b></p>
+  <!--webbot bot="Include" u-include="../contacts/SCI.html" tag="BODY" startspan
+  -->
+
+<CENTER>
+<TABLE WIDTH="96%">
+<TR>
+<TD VALIGN=TOP WIDTH=48%>
+
+College of Science<BR>
+The University of Arizona<BR>Gould-Simpson Building, 1025<BR>PO Box 210077<BR>Tucson, AZ 85721-0077
+
+</TD>
+<td width=4%> 
+</td>
+<TD VALIGN=TOP WIDTH=48%>
+
+Phone: (520) 621-8128<BR>Fax:  (520) 621-8389<BR>Email:  
+<a href="mailto:smcgrath@u.arizona.edu">science@email.arizona.edu</a><BR>Web: 
+<img src="/2011-12/images/globe-external.gif" alt="External Link" width="15" height="15"> <a href="http://cos.arizona.edu/">College Homepage</a>
+</TD></TR></TABLE></center>
+
+<!--webbot bot="Include" endspan i-checksum="6735" --><p>&nbsp;</p>
+	<p><b>Departments and Laboratories:</b></p>
+<ul>  
+<li><a href="http://www.physics.arizona.edu/ams/">Accelerator Mass Spectrometry Laboratory</a></li>
+<li><a href="atmo.html">Atmospheric Sciences</a></li>	
+<li><a href="geos.html">Geosciences</a></li>
+<li><a href="hwrx.html">Hydrology and Water Resources</a></li>
+<li><a href="http://cos.arizona.edu/sci_departments/tree_ring.asp">Laboratory of Tree Ring Research</a></li>
+<li><a href="swes.html">Soil, Water and Environmental Science</a> *</li>
+</ul>
+<p class="style1">*  The Department of Soil, Water and Environmental Science is administered by the 
+<a href="cals.html">College of Agriculture and Life Sciences</a>. </p>  
+  
+<p>The School of Earth and Environmental Sciences is in the <a href="sci.html">College of Science</a>.</p>
+<p><b>For more information contact the college office listed above. </b> </p>
+
+</body>
+
+</html>
