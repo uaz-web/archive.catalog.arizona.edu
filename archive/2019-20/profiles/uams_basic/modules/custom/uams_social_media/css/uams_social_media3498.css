@@ -1,0 +1,79 @@
+/** Social Media **/
+#footer_site UL#social-media-links {
+    padding: 0rem 0 0;
+    width: 100%;
+}
+#block-uams-social-media-uams-social-media-links DIV.block-site-settings-media
+{
+	/*+placement:float-right 0px 0px;*/
+	float: right;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+#block-uams-social-media-uams-social-media-links UL#social-media-links LI {
+    float: left;
+    list-style: none;
+    line-height: 2.4;
+    border: 0;
+    font-size: 14px;
+    padding-left: 0;
+    width: 100%;
+}
+#block-uams-social-media-uams-social-media-links UL#social-media-links LI A {
+    color: hsl(0, 0%, 20%);
+    font-weight: normal;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 2;
+    vertical-align: top;
+    text-transform: none;
+}
+#block-uams-social-media-uams-social-media-links UL#social-media-links LI {
+    float: none;
+    list-style: none;
+    line-height: 2.3;
+    padding: 0;
+}
+#block-uams-social-media-uams-social-media-links li:last-child {
+	border: 0;
+}
+#social-media-links A.facebook I, A.linkedin I, A.twitter I, A.youtube I {
+    background: hsla(0, 0%, 0%, 0) url(../img/bg_social.svg) no-repeat 0 0;
+    width: 23px;
+    display: inline-block;
+    background-size: 114px;
+    height: 23px;
+    margin: 0 .5em 0 0;
+    transition: background .3s ease-in-out;
+}
+#block-uams-social-media-uams-social-media-links A.facebook:hover I
+{
+	background-position: 0 -29px;
+}
+#block-uams-social-media-uams-social-media-links A.linkedin I
+{
+	background-position: -31px 0px;
+}
+#block-uams-social-media-uams-social-media-links A.linkedin:hover I
+{
+	background-position: -31px -30px;
+}
+#block-uams-social-media-uams-social-media-links A.twitter I
+{
+	background-position: -60px 0px;
+}
+#block-uams-social-media-uams-social-media-links A.twitter:hover I
+{
+	background-position: -60px -30px;
+}
+#block-uams-social-media-uams-social-media-links A.youtube I
+{
+	background-position: -90px 0px;
+}
+#block-uams-social-media-uams-social-media-links A.youtube:hover I
+{
+	background-position: -90px -30px;
+}
+
